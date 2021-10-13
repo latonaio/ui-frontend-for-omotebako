@@ -5,7 +5,7 @@ ui-frontend-for-omotebakoは、Latonaが提供するエッジアプリケーシ�
 ## OMOTE-Bako のエッジコンピューティングアーキテクチャ  
 ui-frontend-for-omotebakoは、下記の黄色い枠の部分のリソースです。  
 
-![OMOTE-Bakoアーキテクチャ](Documents/omotebako_architecture_forpc.png)
+![OMOTE-Bakoアーキテクチャ](Documents/omotebako_architecture_20211013.png)
 
 ## UIの一例   
 下記の画像は、ui-frontend-for-omotebakoによる実際のUIの一例です。   
