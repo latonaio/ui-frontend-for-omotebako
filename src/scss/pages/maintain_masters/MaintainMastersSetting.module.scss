@@ -1,0 +1,124 @@
+@import '../../Color.scss';
+.maintainMastersSetting {
+  %arrow {
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    position: fixed;
+    top: 550px;
+    cursor: pointer;
+    z-index: 1;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0 6px 6px);
+  }
+
+  .arrowLeft {
+    @extend %arrow;
+    border-right: 40px solid $lightBlue100;
+    left: 260px;
+  }
+
+  .arrowRight {
+    @extend %arrow;
+    border-left: 40px solid $lightBlue100;
+    left: 1860px;
+  }
+
+  .memo {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .textCryptographyInfo {
+    font-size: 3rem;
+    margin-left: 70px;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+  }
+
+  table {
+    font-size: 4rem;
+    border-collapse: collapse;
+    margin-left: 70px;
+
+    tr {
+      height: 100px;
+      align-items: center;
+      display: flex;
+
+      th {
+        width: 350px;
+        font-size: 3rem;
+        text-align-last: left;
+      }
+
+      td {
+        width: 900px;
+
+        input {
+          font-size: 3.6rem;
+          padding: 10px;
+          width: 100%;
+          border: 1px solid $gray200;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0 0 0/0.1) inset;
+
+          &:focus {
+            box-shadow: 0 5px 30px rgba(0 0 0/0.1);
+          }
+        }
+      }
+
+      .checkBox {
+        display: flex;
+        justify-content: center;
+
+        input {
+          height: 80px;
+          width: 80px;
+        }
+      }
+
+      .versionText {
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+
+        span {
+          margin: 0 50px;
+        }
+      }
+
+      label {
+        margin-left: 50px;
+        background-color: $gray400;
+        color: white;
+        font-size: 3rem;
+        padding: 6px 30px;
+        border-radius: 50px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin: 0 20px;
+        }
+
+        input {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  .cloudBackUpInfo {
+    font-size: 3.5rem;
+    text-align: left;
+    margin: 40px 70px;
+  }
+  .memo {
+    font-size: 2rem;
+    width: 790px;
+  }
+}

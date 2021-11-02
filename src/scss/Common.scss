@@ -1,0 +1,468 @@
+@import './Color';
+
+.StyledContents {
+  width: 1670px;
+  font-size: 3.2rem;
+}
+
+.statusBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 3.2rem;
+
+  img {
+    height: 50px;
+    width: 50px;
+    margin: 8px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.svg-inline--fa {
+  vertical-align: middle;
+}
+
+.searchSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.bg-red {
+  background-color: #dc3545 !important;
+}
+
+.left {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.displayFlex {
+  display: flex;
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-contents {
+  display: contents;
+}
+
+.dis-ib {
+  display: inline-block !important;
+}
+
+.dis-n {
+  display: none !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-auto {
+  cursor: auto;
+}
+
+.text-red {
+  color: $red400;
+}
+
+.text-blue {
+  color: $blue500;
+}
+
+.errorMessage {
+  font-size: 1.9rem;
+  color: #a32d2d;
+}
+
+.position-relative {
+  position: relative;
+}
+
+// width
+.w-100 {
+  width: 100%;
+}
+
+.w-120px {
+  width: 120px;
+}
+
+// space
+.mt-10px {
+  margin-top: 10px !important;
+}
+
+.my-10px {
+  margin: 10px 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.checkinStatusRow {
+  width: 1630px;
+  padding: 4px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.float-right {
+  float: right;
+}
+
+.shadow {
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.drop-shadow {
+  filter: drop-shadow(rgba(0, 0, 0, 0.2) 5px 5px 7px);
+}
+
+.text-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-gray {
+  color: $gray400;
+}
+
+.contents {
+  width: 1670px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.leftImage {
+  width: 500px;
+  height: 275px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.faceLabel {
+  background-color: #4f46e5;
+  border-radius: 15px;
+  color: white;
+  line-height: 1;
+  padding: 5px 20px;
+  font-size: 2.2rem;
+  display: inline-block;
+  box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5) inset;
+}
+
+.faceInfoLabel {
+  border: 2px solid $gray700;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 2.6rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  white-space: pre;
+}
+
+.roomLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  border: 2px solid #00b0f0;
+  border-radius: 5px;
+  margin: 5px;
+  width: 100%;
+  font-size: 2.6rem;
+  text-align: center;
+  color: white;
+  height: 70px;
+
+  background: #00b0f0;
+  white-space: pre;
+}
+
+.reservationLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #2f5597;
+  border-radius: 10px;
+  margin: 10px 5px 5px;
+  width: 60%;
+  font-size: 2.6rem;
+  text-align: center;
+  color: white;
+  height: 80px;
+
+  background: #2f5597;
+  white-space: pre;
+
+  cursor: pointer;
+}
+
+.checkinLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #7f5f01;
+  border-radius: 10px;
+  margin: 5px;
+  width: 60%;
+  font-size: 2.6rem;
+  text-align: center;
+  color: white;
+  height: 80px;
+  background: #7f5f01;
+  white-space: pre;
+  cursor: pointer;
+}
+
+// input, select etc...
+.commonInput,
+.datePickerComponent input {
+  height: 32px;
+  width: 300px;
+  color: $gray700;
+  border: 0.75px solid #cccccc;
+  border-radius: 4px;
+  font-size: 2.4rem;
+  padding: 3px 10px;
+  font-family: 'UD';
+  vertical-align: text-top;
+
+  &Address {
+    width: 700px;
+  }
+}
+
+.infoSection {
+  width: 100%;
+  height: 100%;
+  margin-left: 40px;
+  font-family: 'UD';
+}
+
+.infoSectionText {
+  font-size: 3.2rem;
+  white-space: pre;
+  line-height: 1.5;
+}
+
+.selectSection {
+  display: flex;
+
+  .select {
+    width: 200px;
+    font-size: 1.8rem;
+  }
+
+  .selectShort {
+    width: 100px;
+    font-size: 1.8rem;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn ease 0.3s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// css for react-calendar
+.react-calendar {
+  border: none !important;
+  height: 350px;
+  background: $gray100 !important;
+  border-radius: 10px;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+// buttonのcssは将来的に削除
+.button {
+  height: 70px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 2.6rem;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  // size
+  &.small {
+    padding: 10px;
+  }
+
+  &.light-blue {
+    background: #79d5ff;
+  }
+
+  // color
+  &.red {
+    background: red;
+    margin-right: 20px;
+  }
+
+  &.green {
+    background: green;
+  }
+
+  &.yellow {
+    background: #f7c142;
+  }
+
+  // type
+  &.back {
+    background-color: #1264a3;
+    letter-spacing: 1em;
+    text-indent: 1em;
+  }
+
+  &.checkin {
+    height: 174px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f7c142;
+    color: white;
+    border-radius: 20px;
+    font-size: 5.6rem;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI';
+    margin: 30px 0;
+  }
+}
+
+.customerInfoButton {
+  height: 174px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f7c142;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 5.6rem;
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI';
+  white-space: pre;
+  border: none;
+  text-decoration: none;
+  margin: 30px 0;
+
+  position: fixed;
+  z-index: 10;
+  top: 60%;
+  left: 18%;
+  width: 280px;
+  background-color: red;
+  white-space: pre;
+
+  &.customerInfoButton-red {
+    color: white;
+  }
+}
+
+.paymentButton {
+  height: 174px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f7c142;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 5.6rem;
+  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI';
+  white-space: pre;
+  border: none;
+  text-decoration: none;
+  margin: 30px 0;
+
+  position: fixed;
+  z-index: 10;
+  top: 60%;
+  width: 700px;
+  right: 27%;
+  background-color: #2bac76;
+}
+// buttonのcssは将来的に削除

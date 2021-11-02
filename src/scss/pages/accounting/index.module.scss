@@ -1,0 +1,108 @@
+@import '../../Color.scss';
+
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  gap: 15px;
+  margin-right: 25px;
+}
+
+.totalSales {
+  font-size: 3rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 2.6rem;
+}
+
+.listTableContainer {
+  overflow-y: scroll;
+  height: 610px;
+  border-bottom: 1px solid $gray100;
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+
+    thead {
+      height: 100px;
+      color: white;
+      font-size: 2.4rem;
+      background: #00b0f0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-radius: 5px 5px 0 0;
+    }
+
+    tbody {
+      background: white;
+      tr {
+        transition: 0.3s;
+
+        &:hover {
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        td {
+          font-family: 'Segoe UI';
+          font-size: 2.6rem;
+          border-bottom: 1px solid $gray200;
+          padding: 15px;
+          cursor: default;
+          height: 38px;
+        }
+
+        .link {
+          color: $blue600;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 301px 301px;
+  margin-top: 30px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+
+  .buttons {
+    display: flex;
+
+    %button {
+      width: 150px;
+      height: 80px;
+      color: white;
+      margin-left: 10px;
+      font-size: 2.5rem;
+      border-radius: 10px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 $gray700;
+    }
+
+    .button1 {
+      @extend %button;
+      background: $green600;
+    }
+
+    .button2 {
+      @extend %button;
+      background: $blue600;
+    }
+  }
+}

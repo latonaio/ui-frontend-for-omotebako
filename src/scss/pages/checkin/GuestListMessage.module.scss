@@ -1,0 +1,28 @@
+@import '../../Color';
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .message {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 140px;
+    line-height: 2;
+  }
+
+  .button {
+    margin-top: 100px;
+    color: white;
+    background: $yellow400;
+    text-shadow: 0 3px 10px rgba(202, 138, 4);
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 1), 6px 6px 10px rgba(202, 138, 4, 0.5);
+    font-size: 6rem;
+    width: 650px;
+    height: 200px;
+    border-radius: 20px;
+  }
+}

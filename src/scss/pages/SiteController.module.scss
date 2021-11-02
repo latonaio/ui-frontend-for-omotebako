@@ -1,0 +1,154 @@
+@import '../Color.scss';
+
+.siteController {
+  font-family: 'Segoe UI Black';
+  width: 1590px;
+  margin: 20px 40px;
+
+  .statusBar {
+    margin-bottom: 20px;
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 3.2rem;
+      align-items: center;
+      font-weight: bold;
+      display: flex;
+
+      img {
+        height: 50px;
+        width: 50px;
+        margin: 8px;
+      }
+    }
+  }
+}
+
+.listTypes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  %listType {
+    width: 515px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    border-radius: 6px;
+    color: $gray500;
+    background: white;
+    padding: 5px 0;
+    transition: 0.2s;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .listType {
+    @extend %listType;
+    background: white;
+    cursor: pointer;
+    &:hover {
+      color: $gray500;
+      background: $lightBlue200;
+      box-shadow: none;
+    }
+
+    &Active {
+      @extend %listType;
+      color: white;
+      background: $lightBlue400;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(2, 132, 195, 0.5);
+    }
+
+    &Inactive {
+      @extend %listType;
+      color: white;
+      background: $gray300;
+      box-shadow: none;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 4rem;
+  margin-top: 70px;
+
+  .uploadList {
+    width: 1200px;
+    &Item {
+      display: flex;
+      align-items: center;
+      height: 140px;
+
+      .title {
+        width: 450px;
+      }
+
+      .fileUploader {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  %fileImporter {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    padding: 70px;
+    border-radius: 20px;
+    margin-top: 70px;
+  }
+
+  .fileImporterInactvive {
+    @extend %fileImporter;
+    background: $gray300;
+  }
+
+  .fileImporterButton {
+    @extend %fileImporter;
+    text-shadow: 0 3px 9px rgba(180, 83, 9, 0.7);
+    background: $amber400;
+    transition: 0.2s;
+    border-bottom: 10px solid $amber500;
+    box-shadow: 0 8px 12px rgba(180, 83, 9, 0.6), 0 3px 3px rgba(255 255 255/0.3) inset;
+
+    &:active {
+      margin-top: 78px;
+      border-bottom: 2px solid $amber500;
+      transition: 0.2s;
+      box-shadow: 0 0 0 rgba(180, 83, 9, 0.6), 0 0 0 rgba(255 255 255/0.3) inset;
+    }
+  }
+
+  .complete {
+    text-align: center;
+    margin-top: 40px;
+
+    &Text {
+      font-size: 3.5rem;
+      color: $blue600;
+    }
+
+    .fileImporterComplete {
+      @extend %fileImporter;
+      background: $gray300;
+      margin-top: 20px;
+    }
+
+    svg {
+      position: absolute;
+      top: 800px;
+      left: 1475px;
+      font-size: 18rem;
+      margin-right: 10px;
+      color: $lime400;
+      filter: drop-shadow(rgba(101, 163, 13, 0.6) 2px 6px 5px);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '../Color';
+
+.datePickerComponent {
+  .react-datepicker-popper {
+    transform: scale(3) !important;
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 3px 3px 3px);
+    top: 612px !important;
+    left: 960px !important;
+    position: fixed !important;
+  }
+
+  .react-datepicker__time-list-item {
+    height: auto !important;
+  }
+
+  .react-datepicker__triangle {
+    display: none;
+  }
+}

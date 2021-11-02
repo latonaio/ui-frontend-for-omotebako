@@ -1,0 +1,140 @@
+@import '../Color';
+
+.popupOverlay {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0 0 0 /0.35);
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  animation: fadeInTop ease 0.3s;
+  @keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      height: calc(100vh + 30px);
+    }
+    100% {
+      opacity: 1;
+      height: 100vh;
+    }
+  }
+}
+
+.popup {
+  padding: 70px 40px 40px;
+  // ↓Chromeしか効かない
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+
+  .title {
+    color: #333;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 50px;
+    letter-spacing: 1rem;
+  }
+
+  .registered {
+    @extend .title;
+    padding: 10px 70px 0;
+  }
+
+  .container {
+    width: 900px;
+    height: auto;
+
+    .errorText {
+      color: $red400;
+      text-align: center;
+      margin: 0 auto 50px;
+      font-size: 3.2rem;
+    }
+
+    .errorList {
+      max-height: 260px;
+      overflow-y: scroll;
+      border-radius: 10px;
+      background: $gray150;
+      margin: 50px;
+      font-size: 2.8rem;
+      padding-left: 60px;
+      margin: 0 70px 50px;
+      padding: 20px 0 20px 60px;
+      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 1), inset 8px 8px 16px rgba(0, 0, 0, 0.15);
+
+      .listItem {
+        color: #444;
+        line-height: 2.2;
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+
+    button {
+      color: white;
+      background: $lightBlue400;
+      width: 220px;
+      text-align: center;
+      padding: 20px;
+      margin: 0 auto;
+      font-size: 3rem;
+      border-radius: 10px;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(56, 189, 248, 0.5);
+    }
+
+    .red {
+      background: $red400;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(248, 113, 113, 0.5);
+    }
+
+    .gray {
+      background: $gray300;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.popupListContainer {
+  overflow-y: scroll;
+  height: 50vh;
+  width: 700px;
+  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: $gray150;
+  margin: 0 30px 40px;
+
+  .popupList {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr 1fr;
+    padding: 15px;
+    font-size: 2rem;
+    height: 30px;
+    align-items: center;
+    text-align: left;
+    color: #3968bf;
+    font-family: 'Segoe UI';
+    align-items: baseline;
+    cursor: pointer;
+    border-bottom: 1px solid #c7c7c7;
+    overflow: hidden;
+    &:hover {
+      background-color: #aed6c3;
+    }
+
+    font-size: 2.4rem;
+    display: inherit;
+    grid-template-columns: 150px 250px 250px 150px;
+  }
+}

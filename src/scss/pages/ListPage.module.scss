@@ -1,0 +1,319 @@
+@import '../Color.scss';
+
+// Arrows
+%arrow {
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  position: fixed;
+  top: 550px;
+  cursor: pointer;
+  z-index: 1;
+  filter: drop-shadow(rgba(30, 64, 175, 0.35) 3px 3px 3px);
+}
+
+.arrowLeft {
+  @extend %arrow;
+  border-right: 30px solid $blue200;
+  left: 253px;
+}
+
+.arrowRight {
+  @extend %arrow;
+  border-left: 30px solid $blue200;
+  left: 1877px;
+}
+
+// CustomerInfo types
+.listTypes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  %listType {
+    width: 515px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    border-radius: 6px;
+    color: $gray500;
+    background: white;
+    padding: 5px 0;
+    transition: 0.2s;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .listType {
+    @extend %listType;
+    background: white;
+    cursor: pointer;
+    &:hover {
+      color: $gray500;
+      background: $lightBlue200;
+      box-shadow: none;
+    }
+
+    &Active {
+      @extend %listType;
+      color: white;
+      background: $lightBlue400;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(2, 132, 195, 0.5);
+    }
+  }
+}
+
+.listTableContainer {
+  overflow-y: scroll;
+  border-radius: 10px;
+  border-bottom: 1px solid $gray100;
+  height: 653px;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8);
+  &.reservations {
+    height: 708px;
+  }
+  &.masterPage {
+    height: 688px;
+  }
+
+  select {
+    height: 42px;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+
+    .noInfo {
+      color: $blue500;
+      font-family: 'Segoe UI';
+      text-align: left;
+      padding: 20px;
+      letter-spacing: 0.5rem;
+    }
+
+    span {
+      z-index: 10;
+    }
+
+    .textLeft {
+      text-align: left !important;
+    }
+
+    thead {
+      height: 100px;
+      color: white;
+      font-size: 2.4rem;
+      background: $lightBlue400;
+      position: sticky;
+      box-shadow: 0 4px 6px rgba(2, 132, 195, 0.2);
+      top: 0;
+      z-index: 10;
+    }
+
+    tbody {
+      background: white;
+      box-shadow: 0 0 15px rgba(0 0 0/0.2) inset;
+
+      tr {
+        transition: 0.3s;
+        &:hover {
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        td {
+          font-family: 'Segoe UI';
+          font-size: 2.6rem;
+          border-bottom: 1px solid $gray200;
+          padding: 15px;
+          cursor: default;
+          height: 42px;
+        }
+
+        .name {
+          text-align-last: left;
+          cursor: pointer;
+          color: $blue500;
+
+          .faceLabel {
+            background-color: $blue500;
+            border-radius: 15px;
+            color: white;
+            line-height: 1;
+            padding: 5px 20px;
+            margin-left: 10px;
+            font-size: 2.2rem;
+            display: inline-block;
+            box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5) inset;
+          }
+        }
+      }
+
+      // Active
+      .active {
+        background-color: $lightBlue100;
+        position: sticky;
+        bottom: 0;
+        box-shadow: 0 -4px 6px rgba(125, 211, 252, 0.3);
+
+        input {
+          width: 100%;
+          text-align: center;
+          border: 1px solid $gray300;
+          padding: 5px 5px 1px;
+          font-size: 2.6rem;
+          outline: none;
+          font-family: 'Segoe UI';
+          border-radius: 4px;
+          height: 32px;
+          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15) inset;
+        }
+
+        .name {
+          .kanji {
+            width: 170px;
+          }
+          .kana {
+            width: 210px;
+          }
+        }
+
+        .twins {
+          input {
+            width: 35px;
+          }
+          select {
+            width: 49px;
+          }
+        }
+
+        select {
+          width: 100%;
+          background: white;
+          border-radius: 4px;
+          border: 1px solid $gray300;
+          -webkit-appearance: none;
+          appearance: none;
+          font-size: 2.6rem;
+          text-align: center;
+          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15) inset;
+        }
+
+        .error {
+          background-color: $red100;
+
+          &ForDatePicker {
+            input {
+              background-color: $red100;
+            }
+          }
+        }
+      }
+
+      %editButton {
+        font-size: 2.4rem;
+        color: white;
+        border-radius: 50px;
+        padding: 7px 20px;
+        &:active {
+          box-shadow: none;
+        }
+      }
+
+      .editButton {
+        padding: 0;
+        button {
+          @extend %editButton;
+          background: $teal400;
+          box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8), 3px 3px 5px rgba(45, 212, 191, 0.5);
+        }
+      }
+      .deleteButton {
+        padding: 0;
+        button {
+          @extend %editButton;
+          background: $red400;
+          box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8), 3px 3px 5px rgba(248, 113, 113, 0.5);
+        }
+      }
+
+      .saveButton {
+        padding: 0;
+        button {
+          @extend %editButton;
+          box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8), 3px 3px 5px rgba(56, 189, 248, 0.5);
+          background: $lightBlue400;
+        }
+      }
+    }
+  }
+}
+
+.addButton {
+  font-size: 2.8rem;
+  color: white;
+  background: $lightBlue400;
+  text-align: center;
+  cursor: pointer;
+  position: sticky;
+  bottom: 0;
+  padding: 14px 20px;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  float: left;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(56, 189, 248, 0.5);
+  svg {
+    margin-right: 5px;
+    font-size: 3.5rem;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  @extend .addButton;
+  background: $gray400;
+  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(161, 161, 170, 0.5);
+}
+
+.memo {
+  font-size: 3rem;
+  width: 790px;
+  margin-top: 20px;
+}
+
+.datePicker {
+  height: 32px;
+  width: 300px;
+  padding: 3px 10px;
+  color: white;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3.2rem;
+  grid-gap: 20px;
+
+  &Cancel {
+    border: 2px solid $lightBlue400;
+    color: $lightBlue400;
+    background: white;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  &Save {
+    @extend .buttonCancel;
+
+    color: white;
+    background: $lightBlue400;
+  }
+}

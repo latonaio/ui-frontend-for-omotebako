@@ -1,0 +1,38 @@
+.home {
+  width: 1670px;
+  height: 920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .message {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 5.4rem;
+    font-family: 'UD';
+    font-weight: bold;
+    z-index: 3;
+    background: rgba(255 255 255/0.6);
+    padding: 22px;
+    line-height: 1.6;
+    margin-top: 80px;
+    margin-left: 150px;
+  }
+
+  .homeGirl {
+    width: 400px;
+    height: 350px;
+    z-index: 3;
+    margin-left: -30px;
+
+    img {
+      width: 390px;
+    }
+  }
+}

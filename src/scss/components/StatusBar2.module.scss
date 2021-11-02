@@ -1,0 +1,22 @@
+@import '../Color.scss';
+
+.statusBar {
+  margin-bottom: 20px;
+  font-size: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    font-size: 3.2rem;
+    align-items: center;
+    font-weight: bold;
+    display: flex;
+
+    img {
+      height: 50px;
+      width: 50px;
+      margin: 8px;
+    }
+  }
+}

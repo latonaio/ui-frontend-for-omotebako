@@ -1,0 +1,47 @@
+.checkoutGuestInfo {
+  &_container {
+    width: 1670px;
+  }
+
+  &_checkoutButton {
+    height: 174px;
+    width: 600px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f7c142;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 5.6rem;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI';
+    white-space: pre;
+    border: none;
+  }
+
+  &_footermessage {
+    font-size: 3.2rem;
+    position: absolute;
+    top: 1000px;
+    left: 290px;
+  }
+}
+
+.guestAndDays {
+  .guestAndDays_guests {
+    width: 200px;
+    margin-right: 20px;
+  }
+
+  .guestAndDays_days {
+    width: 234px;
+    margin-right: 20px;
+  }
+
+  .guestAndDays_roomNumber {
+    width: 280px;
+  }
+}

@@ -1,0 +1,105 @@
+@import '../Color.scss';
+
+.floors {
+  display: flex;
+  font-size: 3rem;
+  margin: 10px 0;
+
+  %floor {
+    height: 45px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    border-radius: 8px;
+    margin-left: 10px;
+    color: $gray500;
+    background: white;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.2);
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  .floor {
+    @extend %floor;
+    color: $gray500;
+    background: white;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5), inset 8px 8px 16px rgba(0, 0, 0, 0.2);
+    &:hover {
+      color: white;
+      background: $blue300;
+      box-shadow: none;
+    }
+
+    &Active {
+      @extend %floor;
+      color: white;
+      background: $blue500;
+      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(59, 130, 246, 0.5);
+    }
+  }
+}
+
+.rooms {
+  height: 730px;
+  overflow-y: scroll;
+  border-radius: 8px;
+  margin: 30px 0;
+
+  .roomsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    .room {
+      display: flex;
+      flex-direction: column;
+      height: 321px;
+      border: 1px solid $gray400;
+      padding: 20px 30px 5px;
+      border-radius: 10px;
+      background: white;
+      transition: 0.2s;
+      &:hover {
+        box-shadow: 0 10px 30px rgb(0 0 0 / 0.2);
+      }
+
+      &:active {
+        box-shadow: 0 5px 15px rgb(0 0 0 / 0.2) inset;
+      }
+
+      &Invalid {
+        @extend .room;
+        box-shadow: none;
+      }
+
+      &Name {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        font-size: 3rem;
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      &Info {
+        display: flex;
+        height: 100%;
+        font-size: 2.6rem;
+        line-height: 1.6;
+        margin-top: 15px;
+      }
+
+      &Image {
+        width: 200px;
+        height: 200px;
+        margin-top: 5px;
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import '../Color.scss';
+
+.contents {
+  width: 1590px;
+  display: flex;
+  margin: 20px 40px;
+
+  .left {
+    width: 380px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .checkBoxItem {
+      margin-top: 50px;
+      margin-bottom: 20px;
+
+      .labels {
+        display: block;
+        font-size: 2.6rem;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      .checkbox {
+        margin-right: 15px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .right {
+    width: 1220px;
+    margin-left: auto;
+  }
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  top: 980px;
+  left: 1400px;
+
+  %button {
+    width: 150px;
+    height: 80px;
+    color: white;
+    margin-left: 10px;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 $gray700;
+    box-shadow: -4px -4px 6px rgba(255, 255, 255, 1), 4px 4px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .button1 {
+    @extend %button;
+    background: $lightBlue400;
+  }
+
+  .button2 {
+    @extend %button;
+    background: $yellow400;
+  }
+
+  .button3 {
+    @extend %button;
+    background: $blue500;
+  }
+}
+
+.displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 780px;
+
+  p {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

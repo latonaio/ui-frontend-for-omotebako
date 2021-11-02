@@ -1,0 +1,94 @@
+@import '../Color.scss';
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.6rem;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+  }
+
+  .multiple {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .formItem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+
+    label {
+      margin: 0 0 10px 5px;
+      color: $lightBlue700;
+    }
+
+    .required {
+      color: $red400;
+      font-size: 2.2rem;
+      margin-left: 10px;
+    }
+
+    .error {
+      background: $red50;
+      border: 1px solid $red400;
+    }
+
+    input {
+      border: 1px solid $gray300;
+      font-size: 2.6rem;
+      border-radius: 10px;
+      height: 37px;
+      padding: 10px;
+      transition: 0.2s;
+      transform: scale(1);
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15) inset, 0 3px 9px rgba(0, 0, 0, 0);
+      &:focus {
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0) inset, 0 5px 15px rgba(0, 0, 0, 0.15);
+        transform: scale(1.01);
+        transition: 0.2s;
+      }
+    }
+
+    .half {
+      width: 341px;
+    }
+
+    select {
+      @extend input;
+      height: 61px;
+      background: white;
+    }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 60px;
+  margin-top: 40px;
+
+  .gray {
+    color: white;
+    background: $gray300;
+    width: 280px;
+    padding: 25px;
+    font-size: 3.2rem;
+    border-radius: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .blue {
+    @extend .gray;
+    background: $lightBlue400;
+    text-shadow: 1px 1px 3px rgba(56, 189, 248, 0.5);
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(56, 189, 248, 0.5);
+  }
+}

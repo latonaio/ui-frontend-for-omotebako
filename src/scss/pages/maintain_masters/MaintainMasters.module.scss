@@ -1,0 +1,101 @@
+@import '../../Color.scss';
+
+.contents {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 814px;
+
+	.images {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 68vw;
+		margin: 0 auto;
+
+		a {
+			color: $lightBlue600;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			cursor: pointer;
+			font-size: 3.2rem;
+			margin: 0 auto 30px;
+			border-radius: 30px;
+			height: 350px;
+			width: 350px;
+			transition: 0.4s;
+			background: $gray100;
+			text-shadow: 2px 2px 3px rgba(2, 132, 199, 0.5);
+			box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), 6px 6px 10px rgba(0, 0, 0, 0.15);
+			&:hover {
+				box-shadow: -15px -15px 30px rgba(255, 255, 255, 1), 15px 15px 30px rgba(0, 0, 0, 0.25);
+			}
+
+			&:active {
+				box-shadow: -8px -8px 16px rgba(255, 255, 255, 1) inset, 8px 8px 16px rgba(0, 0, 0, 0.2) inset;
+			}
+
+			img {
+				width: 220px;
+				height: 220px;
+				margin-bottom: 40px;
+				filter: drop-shadow(rgba(0, 0, 0, 0.2) 0 0 0);
+				transition: 0.4s;
+			}
+
+			&:hover img {
+				filter: drop-shadow(rgba(0, 0, 0, 0.2) 8px 8px 3px);
+			}
+
+			&:active img {
+				filter: drop-shadow(rgba(0, 0, 0, 0.2) 12px 12px 4px);
+			}
+		}
+	}
+}
+
+.buttons {
+	display: flex;
+	position: absolute;
+	top: 980px;
+	left: 1080px;
+
+	%button {
+		width: 150px;
+		height: 80px;
+		color: white;
+		margin-left: 10px;
+		font-size: 2.5rem;
+		border-radius: 10px;
+		font-weight: bold;
+		text-shadow: 1px 1px 0 $gray700;
+		box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.2);
+	}
+
+	.button1 {
+		@extend %button;
+		background: $yellow500;
+	}
+
+	.button2 {
+		@extend %button;
+		background: $lightBlue400;
+	}
+
+	.button3 {
+		@extend %button;
+		background: $gray500;
+	}
+
+	.button4 {
+		@extend %button;
+		background: $red500;
+	}
+
+	.button5 {
+		@extend %button;
+		background: $blue500;
+	}
+}

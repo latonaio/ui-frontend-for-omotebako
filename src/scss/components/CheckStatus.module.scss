@@ -1,0 +1,44 @@
+@import '../Color.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2rem;
+  width: 450px;
+  align-items: center;
+  color: white;
+
+  .title {
+    font-size: 2.4rem;
+    text-shadow: 0 1px 3px rgba(80, 80, 80, 1);
+    margin-bottom: 10px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-shadow: 0 1px 3px rgba(80, 80, 80, 1);
+
+    .text {
+      background-color: $green200;
+      text-align: center;
+      width: 124px;
+      height: 34px;
+      border-radius: 5px;
+      text-shadow: 0 1px 3px rgba(21, 128, 61, 0.7);
+
+      &Active {
+        @extend .text;
+        background: $lightBlue600;
+        text-shadow: 0 1px 3px rgba(12, 74, 110, 1);
+      }
+    }
+
+    svg {
+      transform: scale(1.5, 2.2);
+      margin-left: 2px;
+      filter: drop-shadow(rgba(80, 80, 80, 1) 0 1px 1px);
+    }
+  }
+}

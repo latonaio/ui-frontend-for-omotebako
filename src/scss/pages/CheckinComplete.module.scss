@@ -1,0 +1,79 @@
+@import '../Color';
+
+.elementsContainer {
+  display: flex;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+
+    img {
+      margin-bottom: 10px;
+      width: 500px;
+      height: 275px;
+    }
+
+    .faceLabel {
+      border: 2px solid $gray700;
+      border-radius: 5px;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 2.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+    }
+
+    .roomLabel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border: 2px solid $lightBlue400;
+      border-radius: 5px;
+      margin: 5px;
+      width: 100%;
+      font-size: 2.6rem;
+      color: white;
+      height: 70px;
+      background: $lightBlue400;
+    }
+  }
+
+  .infoSection {
+    margin-left: 40px;
+    font-family: 'UD';
+
+    .text {
+      font-size: 3.2rem;
+      line-height: 1.5;
+    }
+
+    .checkIcon {
+      height: 170px;
+      width: 170px;
+      margin-left: 700px;
+      margin-top: 80px;
+    }
+
+    .checkinButton {
+      width: 600px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $gray300;
+      color: white;
+      border-radius: 20px;
+      margin-top: 50px;
+      font-size: 5.6rem;
+      text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+      font-family: 'Segoe UI';
+      white-space: pre;
+    }
+  }
+}

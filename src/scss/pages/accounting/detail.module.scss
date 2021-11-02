@@ -1,0 +1,141 @@
+@import '../../Color.scss';
+
+.contents {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 50px;
+
+	table {
+		border-collapse: collapse;
+		margin-left: 20px;
+
+		tr {
+			height: 80px;
+			text-align: left;
+
+			th {
+				width: 320px;
+				font-size: 4rem;
+				font-weight: normal;
+			}
+
+			td {
+				input {
+					width: 600px;
+					font-size: 3.6rem;
+					padding: 10px;
+					border: 1px solid $gray200;
+					border-radius: 10px;
+					box-shadow: 0 5px 15px rgba(0 0 0/0.1) inset;
+
+					&:focus {
+						box-shadow: 0 5px 30px rgba(0 0 0/0.1);
+					}
+				}
+				.receivable {
+					height: 80px;
+				}
+			}
+			.link {
+				color: $blue600;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.voucherInfo {
+		display: flex;
+		.snapShotInfo {
+			width: 470px;
+			font-size: 3rem;
+			margin: 20px 100px;
+		}
+	}
+
+	.total {
+		display: flex;
+		margin: 20px 20px;
+		font-size: 4rem;
+		gap: 140px;
+
+		.value {
+			text-align: right;
+		}
+	}
+
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.box {
+			display: flex;
+			font-size: 2.5rem;
+			font-family: 'Segoe UI Black';
+			margin-bottom: 20px;
+		}
+
+		.text {
+			display: flex;
+			font-size: 2rem;
+			font-family: 'Segoe UI Black';
+			margin-left: 20px;
+			width: 580px;
+		}
+
+		.left {
+			display: flex;
+			flex-direction: column;
+
+			%button {
+				width: 250px;
+				height: 80px;
+				color: white;
+				margin-left: 10px;
+				font-size: 3.5rem;
+				border-radius: 10px;
+				font-weight: bold;
+				text-shadow: 1px 1px 0 $gray700;
+			}
+
+			.button1 {
+				@extend %button;
+				background: $green600;
+			}
+
+			.button2 {
+				@extend %button;
+				background: $gray700;
+			}
+		}
+
+		.buttons {
+			display: flex;
+			position: absolute;
+			top: 980px;
+			left: 1560px;
+
+			%button {
+				width: 150px;
+				height: 80px;
+				color: white;
+				margin-left: 10px;
+				font-size: 2.5rem;
+				border-radius: 10px;
+				font-weight: bold;
+				text-shadow: 1px 1px 0 $gray700;
+			}
+
+			.button1 {
+				@extend %button;
+				background: $green600;
+			}
+
+			.button2 {
+				@extend %button;
+				background: $blue600;
+			}
+		}
+	}
+}

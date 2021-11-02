@@ -1,0 +1,17 @@
+ui-frontend-for-omotebako:
+  scale: 1
+  startup: yes
+  always: yes
+  network: NodePort
+  ports:
+    - name: ui-frontend
+      protocol: TCP
+      port: 4000
+      nodePort: 30040
+  env:
+    REACT_APP_PUBLIC_URL: 'http://localhost:4000/'
+    REACT_APP_APIURL: 'http://localhost:30080/api/'
+    REACT_APP_WEB_SOCKET_URL: 'ws://localhost:30099/'
+    PORT: '4000'
+    REACT_APP_IMAGE_PATH: 'http://localhost:30080/'
+    REACT_APP_GRPCURL: 'http://localhost:30050'

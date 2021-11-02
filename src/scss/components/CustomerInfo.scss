@@ -1,0 +1,76 @@
+.customerInfoComponent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+  height: 70%;
+
+  &_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  &_image {
+    width: 500px;
+    height: 275px;
+    margin-bottom: 20px;
+  }
+
+  &_faceLabel {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 2.6rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    white-space: pre;
+  }
+}
+
+.nameEnter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 260px;
+  margin-right: 20px;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  vertical-align: bottom;
+  padding: 0;
+
+  .nameEnter.nameEnter-select {
+    width: 330px;
+    border: none;
+    font-size: 1.6rem;
+    padding: 0;
+    top: -8px;
+  }
+
+  .nameEnter.nameEnter-guests {
+    width: 100px;
+    white-space: nowrap;
+  }
+}
+
+.guestAndDays {
+  .guestAndDays_guests {
+    width: 200px;
+  }
+
+  .guestAndDays_days {
+    width: 234px;
+  }
+
+  .guestAndDays_roomNumber {
+    width: 280px;
+  }
+}

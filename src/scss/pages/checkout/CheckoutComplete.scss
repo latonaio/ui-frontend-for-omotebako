@@ -1,0 +1,44 @@
+.checkoutComplete {
+  &_container {
+    padding: 120px 100px;
+  }
+
+  &_elementsContainer {
+    display: flex;
+  }
+
+  &_image {
+    width: 500px;
+    height: 275px;
+  }
+
+  &_infoSection {
+    margin-left: 60px;
+    font-size: 3.2rem;
+    line-height: 1.5;
+    font-family: 'UD';
+  }
+
+  &_buttonSection {
+    display: flex;
+    margin-top: 120px;
+    justify-content: center;
+  }
+
+  &_styledButton {
+    height: 174px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #d8d8d8;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 5.6rem;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI';
+    white-space: pre;
+  }
+}

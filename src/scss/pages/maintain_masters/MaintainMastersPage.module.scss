@@ -1,0 +1,259 @@
+@import '../../Color.scss';
+
+.contents {
+  width: 100%;
+
+  .tabs {
+    display: flex;
+    font-size: 3rem;
+    margin: 10px 0 20px;
+
+    .tab {
+      height: 40px;
+      width: 200px;
+      color: white;
+      background: $gray300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.6rem;
+      border-radius: 8px;
+      margin-left: 10px;
+      &:first-child {
+        margin: 0;
+      }
+      &Active {
+        @extend .tab;
+        background: $blue600;
+        box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5) inset;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    .card {
+      border: 1px solid $gray500;
+      height: 282px;
+      border-radius: 10px;
+      padding: 10px;
+      transition: 0.2s;
+      &:hover {
+        box-shadow: 0 10px 30px rgba(0 0 0 /0.2);
+      }
+
+      &Header {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        height: 40px;
+        padding: 0 10px;
+        font-size: 2.8rem;
+      }
+
+      &Body {
+        display: flex;
+        padding: 10px;
+
+        img {
+          height: 200px;
+          min-width: 330px;
+        }
+
+        .texts {
+          font-size: 1.8rem;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .description {
+            height: 160px;
+            overflow: clip;
+          }
+
+          .hashTags {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .hashTag {
+              font-size: 2rem;
+              margin-right: 20px;
+            }
+
+            .price {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    .card {
+      border: 1px solid $gray600;
+      height: 275px;
+      border-radius: 10px;
+      padding: 10px;
+      transition: 0.2s;
+      &:hover {
+        box-shadow: 0 10px 30px rgba(0 0 0 /0.2);
+      }
+
+      &Header {
+        line-height: 1.5;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-left: 10px;
+        }
+      }
+
+      &Body {
+        display: flex;
+
+        img {
+          height: 180px;
+          padding: 5px;
+          min-width: 230px;
+          max-width: 230px;
+        }
+
+        .info {
+          font-size: 2.4rem;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  .roomDetail {
+    display: flex;
+    height: 590px;
+    border: 1px solid $gray500;
+    border-radius: 20px;
+    padding: 20px 30px;
+    line-height: 1.5;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      font-size: 4rem;
+      margin-right: 30px;
+
+      img {
+        padding: 20px 0;
+        height: 100%;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      font-size: 3.2rem;
+
+      .text {
+        font-size: 2.4rem;
+      }
+
+      .plan {
+        margin-bottom: 10px;
+      }
+
+      .tagSection {
+        margin-bottom: 10px;
+
+        .tags {
+          display: flex;
+
+          .tag {
+            font-size: 2.4rem;
+            margin-left: 20px;
+          }
+        }
+      }
+
+      table {
+        font-size: 2.4rem;
+        width: 100%;
+        border-spacing: 0;
+        text-align: center;
+
+        thead {
+          color: white;
+          background: #8496af;
+
+          tr {
+            height: 70px;
+          }
+        }
+
+        tbody {
+          font-weight: normal;
+          font-family: 'Segoe UI';
+
+          tr {
+            height: 70px;
+            td {
+              border-bottom: 1px solid $gray300;
+            }
+          }
+
+          .total {
+            background: $lightBlue100;
+          }
+        }
+      }
+
+      .listTableContainer {
+        overflow-y: scroll;
+        border-bottom: 1px solid $gray100;
+
+        table {
+          table-layout: fixed;
+          width: 100%;
+          text-align: center;
+          border-spacing: 0;
+
+          thead {
+            height: 70px;
+            color: white;
+            font-size: 2.4rem;
+            background: #00b0f0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 5px 5px 0 0;
+          }
+
+          tbody {
+            tr {
+              height: 70px;
+
+              td {
+                font-family: 'Segoe UI';
+                font-size: 2.6rem;
+                border-bottom: 1px solid $gray300;
+                cursor: default;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

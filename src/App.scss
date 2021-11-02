@@ -1,0 +1,76 @@
+@import './scss/Common';
+@import './scss/Color';
+
+@font-face {
+  font-family: 'Segoe UI Black';
+  src: local('Segoe UI Black'), url('./assets/fonts/seguibl.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Calibri Light';
+  src: local('Calibri Light'), url('./assets/fonts/calibril.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hirano';
+  src: local('Hirano'), url('./assets/fonts/HiraKakuStdN-W7-AlphaNum-01.otf') format('opentype'),
+    url('./assets/fonts/HiraKakuStdN-W7-AlphaNum-02.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Segoe';
+  src: local('Segoe'), url('./assets/fonts/segoe_ui.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UD';
+  src: local('UD'), url('./assets/fonts/UDDigiKyokashoN-B-01.ttf') format('truetype'),
+    url('./assets/fonts/UDDigiKyokashoNP-B-02.ttf') format('truetype'),
+    url('./assets/fonts/UDDigiKyokashoNK-B-03.ttf') format('truetype');
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  margin: 0;
+  background: $gray100;
+}
+
+html,
+body {
+  font-family: 'Segoe', 'Calibri Light', 'Hiragino', 'Segoe UI Black';
+}
+
+html,
+body,
+a {
+  color: $gray700;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: $gray500;
+  }
+}
