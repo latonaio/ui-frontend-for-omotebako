@@ -5,13 +5,7 @@ DATE="$(date "+%Y%m%d%H%M")"
 REPOSITORY_PREFIX="latonaio"
 SERVICE_NAME="ui-frontend-for-omotebako"
 
-if [[ $PUSH == "production" ]]; then
-    docker build -t ${SERVICE_NAME}:"${DATE}" -f docker/production/Dockerfile .
-else
-    docker build -t ${SERVICE_NAME}:"${DATE}" .
-fi
-
-# DOCKER_BUILDKIT=1 docker build --progress=plain -t ${SERVICE_NAME}:"${DATE}" .
+DOCKER_BUILDKIT=1 docker build --progress=plain -t ${SERVICE_NAME}:"${DATE}" .
 
 # tagging
 docker tag ${SERVICE_NAME}:"${DATE}" ${SERVICE_NAME}:latest

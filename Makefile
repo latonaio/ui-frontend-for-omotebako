@@ -4,7 +4,7 @@ docker-build:
 
 docker-build-production:
 	echo "build for production"
-	bash docker-build.sh production
+	bash docker-build.sh
 
 docker-push:
 	bash docker-build.sh push
