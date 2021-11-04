@@ -11,7 +11,7 @@ ui-frontend-for-omotebako のアーキテクチャやソースコードを参照
 ## OMOTE-Bako のエッジコンピューティングアーキテクチャ  
 ui-frontend-for-omotebakoは、下記の黄色い枠の部分のリソースです。  
 
-![OMOTE-Bakoアーキテクチャ](Documents/omotebako_architecture_20211016_uifrontend.png)
+![OMOTE-Bakoアーキテクチャ](Documents/omotebako_architecture_20211104_uifrontend.png)
 
 ## UIの一例   
 下記の画像は、ui-frontend-for-omotebakoによる実際のUIの一例です。   
@@ -19,10 +19,22 @@ ui-frontend-for-omotebakoは、下記の黄色い枠の部分のリソースで�
 ![宿泊情報](Documents/stay_info.png)
 ![客室情報](Documents/room_info.png)
 
-## ui-frontend-for-omotebakoの稼働環境   
-・ ui-frontend-for-omotebakoは、エッジ環境上で稼働します。    
-・ ui-frontend-for-omotebakoは、AIONならびに(または)Kubernetes上で稼働することができるマイクロサービスです。  
-・ ui-frontend-for-omotebakoは、Latonaでは、Reactフレームワーク、Next.jsによって開発されています。  
+
+## 動作環境
+
+ui-frontend-for-omotebako は、AION のプラットフォーム上での動作を前提としています。
+使用する際は、事前に下記の通りAIONの動作環境を用意してください。
+
+* OS: Linux OS  
+
+* CPU: ARM/AMD/Intel  
+
+* Kubernetes  
+
+* AION のリソース
+
+* Reactフレームワーク、Next.js  
+ 
 
 ## Getting Started　　
 1.下記コマンドでDockerイメージを作成します。  　　
